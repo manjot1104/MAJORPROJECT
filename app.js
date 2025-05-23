@@ -86,9 +86,6 @@ app.use((req,res,next) => {
     res.locals.currUser = req.user; 
     next();
 });
-app.get("/", (req, res) => {
-  res.send("Server is up and running 🚀");
-});
 
 app.use('/listings', listingsRouter);
 app.use('/listings/:id/reviews',reviewsRouter);

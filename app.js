@@ -86,6 +86,10 @@ app.use((req,res,next) => {
     res.locals.currUser = req.user; 
     next();
 });
+app.get("/", (req, res) => {
+  res.render("home.ejs");
+});
+
 
 
 app.get("/", (req, res) => {
@@ -108,6 +112,7 @@ app.use((err,req,res,next) =>{
     // res.status(statusCode).send(message);
 });
 
-app.listen(5050 , () => {
-    console.log(("server is listening to port 5050"));
+const PORT = process.env.PORT || 5000;
+app.listen(PORT, () => {
+  console.log(`Server is running on port ${PORT}`);
 });

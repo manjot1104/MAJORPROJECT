@@ -91,11 +91,6 @@ app.get("/", (req, res) => {
 });
 
 
-
-app.get("/", (req, res) => {
-  res.render("home.ejs");
-});
-
 app.use('/listings', listingsRouter);
 app.use('/listings/:id/reviews',reviewsRouter);
 app.use('/',userRouter);

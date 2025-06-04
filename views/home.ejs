@@ -1,9 +1,77 @@
 <% layout('layouts/boilerplate') %>
-<body>
-  <h1>Welcome to StayNest 🏡</h1>
-  <% if (!currUser) { %>
-    <a href="/login">Login</a> | <a href="/signup">SignUp</a>
-  <% } else { %>
-    <a href="/listings">View Listings</a>
-  <% } %>
-</body>
+
+
+<style>
+  .hero-section {
+    background: url('/images/hero-bg.jpg') no-repeat center center/cover;
+    color: white;
+    padding: 100px 0;
+    text-shadow: 1px 1px 4px rgba(0,0,0,0.8);
+  }
+
+  .hero-btn {
+    background-color: #ff5a5f;
+    border: none;
+    padding: 12px 25px;
+    font-size: 1.2rem;
+  }
+
+  .hero-btn:hover {
+    background-color: #e14c4c;
+  }
+
+  .features {
+    margin-top: 60px;
+  }
+
+  .feature-box {
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0px 0px 12px rgba(0, 0, 0, 0.1);
+  }
+
+  .feature-icon {
+    font-size: 2.5rem;
+    color: #ff5a5f;
+  }
+  .container{
+    color: black;
+  }
+</style>
+
+<div class="hero-section text-center">
+  <div class="container">
+    <h1 class="display-3 fw-bold">Welcome to StayNest</h1>
+    <p class="lead mt-3">Your go-to platform for listing travel stays easily and securely.</p>
+    <a href="/listings" class="btn hero-btn mt-4">Explore Listings</a>
+  </div>
+</div>
+
+<div class="container-features">
+  <div class="row text-center">
+    <div class="col-md-4">
+      <div class="feature-box bg-white">
+        <i class="bi bi-shield-lock feature-icon"></i>
+        <h5 class="mt-3">Secure Login</h5>
+        <p>Login and session management secured with Passport.js and MongoDB.</p>
+      </div>
+    </div>
+    <div class="col-md-4">
+      <div class="feature-box bg-white">
+        <i class="bi bi-building feature-icon"></i>
+        <h5 class="mt-3">List Your Property</h5>
+        <p>Easily add, update, and manage your properties with our user-friendly dashboard.</p>
+      </div>
+    </div>
+    <div class="col-md-4">
+      <div class="feature-box bg-white">
+        <i class="bi bi-globe feature-icon"></i>
+        <h5 class="mt-3">Anywhere, Anytime</h5>
+        <p>Access StayNest from anywhere — fully responsive and mobile-friendly.</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
